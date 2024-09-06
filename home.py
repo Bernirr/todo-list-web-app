@@ -3,15 +3,17 @@ import web_app_functions
 
 my_todos = web_app_functions.get_todos()
 
+st.set_page_config(layout="wide")
+
 def add_todo():
     new_todo = st.session_state["new_todo"] + "\n"
     my_todos.append(new_todo)
     web_app_functions.write_todos(my_todos)
 
-
 st.title("My Todo App")
 st.subheader("This is my simple todo app.")
-st.write("The purpose of this app is to checkout this thing called streamlit")
+st.write("The purpose of this app is to checkout this thing called <b>streamlit</b>.",
+         unsafe_allow_html=True)
 
 # st.checkbox("Buy grocery")
 # st.checkbox("Check me out")
