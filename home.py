@@ -1,8 +1,11 @@
 # Comments:
 # Simple web app deployed on streamlit cloud platform
 # Streamlit provides the library to create the web app and also the cloud service to host the app
-# Streamlit apps can also be deployed on other servers, such as Digital Ocean, but the
-# deployment process is more demanding
+# Streamlit apps can also be deployed on other servers (but the
+# deployment process is more demanding) such as:
+# Infrastructure as a Service (IaaS): Digital Ocean, AWS, Google Cloud (more flexible and cheaper than PaaS, but more difficult to use)
+# PaaS Options (best option, no server/OS maintenance, focus on coding/dev): Heroku, PythonAnywhere, Google App Engine, AWS
+# PhysicaL servers (hardest to use, maintain the OS and the physical COMPONENTS of servers themselves)
 
 # to have multiple pages for the web app:
 # - create a "pages" folder in the project root directory
