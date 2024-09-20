@@ -1,9 +1,32 @@
+# Comments:
+# Simple web app deployed on streamlit cloud platform
+# Streamlit provides the library to create the web app and also the cloud service to host the app
+# Streamlit apps can also be deployed on other servers, such as Digital Ocean, but the
+# deployment process is more demanding
+
+# to have multiple pages for the web app:
+# - create a "pages" folder in the project root directory
+# - add the .py files for each of the pages in the pages folder. e.g. about.py
+# - refresh browser
+# the name of the .py file reflects the names of the pages in the tabs in the web app menu panel
+# if any file name is changed the program should be interrupted with ctrl c and re-run
+# (just refreshing the browser wont work)
+
+# Git notes: before and after making changes
+# Commit the initial state before making any changes
+# If I do not want to keep the changes:
+# - go to git (bottom-left menu of the screen)
+# - right click onn the las commit
+# - Reset Current Branch to Here... - Hard - Reset
+# Right click on root directory - Reload from disk - voila!
+
+
 import streamlit as st
 import web_app_functions
 
 my_todos = web_app_functions.get_todos()
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide") #this method allows page configuration
 
 def add_todo():
     new_todo = st.session_state["new_todo"] + "\n"
